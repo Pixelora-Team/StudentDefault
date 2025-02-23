@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     setLoading(true); 
     axios
-      .get("http://localhost:5000/Student/")
+      .get("https://jsonbackendmain.onrender.com/Student")
       .then((res) => {
         if (Array.isArray(res.data)) {
           setStudents(res.data);
