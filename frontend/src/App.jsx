@@ -43,10 +43,10 @@ const App = () => {
   };
 
   const sendMessageToMyWhatsApp = () => {
-    const defaultstd = defaulters.map((student) => ` ${student.ID} ${student.StudentName}`).join("\n");
-    const latecomerstd = lateComers.map((student) => `${student.ID} ${student.StudentName}`).join("\n");
+    const defaultstd = defaulters.map((student) => ` ${student.RegisterNo} - ${student.Rollno} - ${student.StudentName}`).join("\n");
+    const latecomerstd = lateComers.map((student) => `${student.RegisterNo} - ${student.Rollno} - ${student.StudentName}`).join("\n");
     const twocomers = defaulters.filter((s) => lateComers.some((l) => l.ID === s.ID));
-    const comers = twocomers.map((student) => ` ${student.ID} ${student.StudentName}`).join("\n");
+    const comers = twocomers.map((student) => ` ${student.RegisterNo} - ${student.Rollno} - ${student.StudentName}`).join("\n");
 
     const message = encodeURIComponent(
       `${currentDate}\nDefaulter & Latecomer Summary: \n\n ` +
