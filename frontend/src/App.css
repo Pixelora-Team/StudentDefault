@@ -102,6 +102,15 @@
     background-color: #1ebe5d;
 }
 
+
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+
 @media (max-width: 768px) {
     .container {
         width: 100%;
